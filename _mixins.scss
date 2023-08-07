@@ -1,0 +1,12 @@
+@mixin contenCenter() {
+    margin: 0 auto;
+    max-width: 1140px;
+}
+
+@mixin contentFlexCenter() {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    flex-wrap: wrap;
+    justify-content: center;
+}
