@@ -132,6 +132,9 @@ a {
   align-items: center;
   gap: 10px;
 }
+.main__content-left .main__form-radio .radio-other {
+  display: none;
+}
 .main .main__button {
   display: flex;
   align-items: start;
@@ -203,9 +206,12 @@ a {
 }
 .footer-center__content {
   display: grid;
-  grid-auto-flow: column;
   justify-content: space-between;
   padding: 86px 0 126px;
+  grid-auto-flow: dense;
+  grid-template-columns: repeat(auto-fit, minmax(360px, 1fr));
+  justify-items: center;
+  gap: 48px;
 }
 .footer-center__content-left {
   max-width: 359px;
@@ -229,7 +235,7 @@ a {
   font-style: italic;
 }
 .footer-center__content-right {
-  width: 557px;
+  max-width: 557px;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -343,4 +349,89 @@ a {
 .footer-bottom__icon-link :hover {
   background-color: #F26376;
   transition: all 1s ease-in-out;
+}
+
+@media (min-width: 1024px) and (max-width: 1139px) {
+  .center {
+    margin: 0 auto;
+    max-width: 1010px;
+  }
+  .main .main__content {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 64px;
+    margin-bottom: 96px;
+    gap: 25px;
+  }
+  .main .main__content-right {
+    max-width: 652px;
+    display: flex;
+    flex-direction: column;
+    gap: 22px;
+  }
+  .main .main__form-radio .radio-other {
+    display: flex;
+    gap: 10px;
+  }
+}
+@media (min-width: 728px) and (max-width: 1023px) {
+  .center {
+    margin: 0 auto;
+    max-width: 740px;
+  }
+  .html {
+    font-size: 16px;
+  }
+  .main .main__content {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 64px;
+    margin-bottom: 96px;
+    gap: 22px;
+  }
+  .main .main__content-right {
+    max-width: 652px;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+  }
+  .main .main__content-right h1 {
+    color: #000;
+    font-size: 16px;
+    font-weight: 300;
+    line-height: 29px;
+  }
+  .main .main__content-right p {
+    color: #000;
+    font-size: 16px;
+    font-weight: 300;
+    line-height: 20px;
+  }
+  .main .main__content-right ul {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    color: #000;
+    font-size: 16px;
+    font-weight: 300;
+    line-height: 20px;
+  }
+  .main .main__content-right li {
+    display: flex;
+    list-style-type: none;
+    font-size: 16px;
+  }
+  .main .main__content-right li::before {
+    content: url(img/mark.svg);
+  }
+  .main .main__form-radio .radio-other {
+    display: flex;
+    gap: 10px;
+  }
+  .main .footer-center__content {
+    display: grid;
+    padding: 40px 0 96px;
+    justify-items: center;
+    gap: 48px;
+  }
 }/*# sourceMappingURL=style.css.map */

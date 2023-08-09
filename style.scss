@@ -129,6 +129,9 @@ a {
                 line-height: 13px;
                 align-items: center;
                 gap: 10px;
+                .radio-other {
+                    display: none;
+                }
             }
         }
     }
@@ -203,9 +206,12 @@ a {
     background-size: 100% 100%;
     &__content {
         display: grid;
-        grid-auto-flow: column;
         justify-content: space-between;
         padding: 86px 0 126px;
+        grid-auto-flow: dense;
+        grid-template-columns: repeat(auto-fit, minmax(360px, 1fr));
+        justify-items: center;
+        gap: 48px;
     }
     &__content-left {
         max-width: 359px;
@@ -225,7 +231,7 @@ a {
         font-style: italic;
     }
     &__content-right {
-        width: 557px;
+        max-width: 557px;
         @include contentFlexCenter();
     }
     &__subscribe-title {
@@ -331,5 +337,101 @@ a {
     &__icon-link :hover {
         background-color: #F26376;
         transition: all 1s ease-in-out;
+    }
+}
+
+@media(min-width:1024px) and (max-width:1139px) {
+    .center {
+        @include LaptopContenCenter();
+    }
+    .main {
+        .main__content {
+            display: flex;
+            justify-content: space-between;
+            margin-top: 64px;
+            margin-bottom: 96px;
+            gap: 25px;
+        }
+        .main__content-right {
+            max-width: 652px;
+            display: flex;
+            flex-direction: column;
+            gap: 22px;
+        }
+        .main__form {
+            &-radio {
+                .radio-other {
+                    display: flex;
+                    gap: 10px;
+                }
+            }
+        }
+    }
+}
+
+@media(min-width:728px) and (max-width:1023px) {
+    .center {
+        @include TabletContenCenter();
+    }
+    .html {
+        font-size: 16px;
+    }
+    .main {
+        .main__content {
+            display: flex;
+            justify-content: space-between;
+            margin-top: 64px;
+            margin-bottom: 96px;
+            gap: 22px;
+        }
+        .main__content-right {
+            max-width: 652px;
+            display: flex;
+            flex-direction: column;
+            gap: 16px;
+            h1 {
+                color: #000;
+                font-size: 16px;
+                font-weight: 300;
+                line-height: 29px;
+            }
+            p {
+                color: #000;
+                font-size: 16px;
+                font-weight: 300;
+                line-height: 20px;
+            }
+            ul {
+                display: flex;
+                flex-direction: column;
+                gap: 16px;
+                color: #000;
+                font-size: 16px;
+                font-weight: 300;
+                line-height: 20px;
+            }
+            li {
+                display: flex;
+                list-style-type: none;
+                font-size: 16px;
+                &::before {
+                    content: url(img/mark.svg);
+                }
+            }
+        }
+        .main__form {
+            &-radio {
+                .radio-other {
+                    display: flex;
+                    gap: 10px;
+                }
+            }
+        }
+        .footer-center__content {
+            display: grid;
+            padding: 40px 0 96px;
+            justify-items: center;
+            gap: 48px;
+        }
     }
 }
