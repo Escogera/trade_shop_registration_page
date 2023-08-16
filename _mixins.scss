@@ -13,6 +13,16 @@
     max-width: 740px;
 }
 
+@mixin MobileHorisontContenCenter() {
+    margin: 0 auto;
+    max-width: 393px;
+}
+
+@mixin MobileVerticalContenCenter() {
+    margin: 0 auto;
+    max-width: 359px;
+}
+
 @mixin contentFlexCenter() {
     display: flex;
     flex-direction: column;

@@ -435,3 +435,257 @@ a {
         }
     }
 }
+
+@media(min-width:425px) and (max-width:745px) {
+    .center {
+        @include MobileHorisontContenCenter();
+    }
+    header {
+        .navigation {
+            &__right {
+                .navigation__user-link {
+                    display: none;
+                }
+                .navigation__cart-link {
+                    display: none;
+                }
+            }
+        }
+    }
+    .header-top {
+        &__content {
+            justify-content: center;
+            padding-top: 50px;
+            padding-bottom: 69px;
+        }
+    }
+    .main {
+        .main__content {
+            flex-flow: column;
+            display: flex;
+            justify-content: center;
+            margin-top: 40px;
+            margin-bottom: 100px;
+            gap: 40px;
+            align-items: center;
+        }
+        .main__content-right {
+            max-width: 358px;
+            display: flex;
+            flex-direction: column;
+            gap: 22px;
+            h1 {
+                color: #000;
+                font-size: 16px;
+                font-weight: 300;
+                line-height: 29px;
+                margin-bottom: 10px;
+            }
+            p {
+                color: #000;
+                font-size: 16px;
+                font-weight: 300;
+                line-height: 20px;
+            }
+            ul {
+                display: flex;
+                flex-direction: column;
+                gap: 16px;
+                color: #000;
+                font-size: 16px;
+                font-weight: 300;
+                line-height: 20px;
+            }
+            li {
+                display: flex;
+                list-style-type: none;
+                font-size: 16px;
+                &::before {
+                    content: url(img/mark.svg);
+                }
+            }
+        }
+        .main__form {
+            &-radio {
+                .radio-other {
+                    display: flex;
+                    gap: 10px;
+                }
+            }
+        }
+        .footer-center__content {
+            display: grid;
+            padding: 40px 0 96px;
+            justify-items: center;
+            gap: 48px;
+        }
+    }
+    .footer-top {
+        background: linear-gradient(rgba(244, 244, 244, 0.7), rgba(244, 244, 244, 0.5)), url(img/footer-background.png) 27%;
+        background-size: cover;
+        &__content {
+            gap: 59px;
+            padding: 64px 0 109px;
+            justify-items: center;
+        }
+        &__visiter-comment {
+            height: auto;
+        }
+        &__subscribe-title {
+            margin-bottom: 22px;
+        }
+        &__subscribe-title-2nd {
+            font-size: 14px;
+        }
+        &__email-subscribe-field {
+            font-size: 14px
+        }
+        &__subscribe-block-left {
+            width: 250px;
+            height: 46px;
+        }
+        &__content-right {
+            width: auto;
+        }
+    }
+    .footer-bottom {
+        &__content {
+            grid-template-columns: 250px;
+            padding: 43px 62px 24px;
+            justify-items: center;
+            gap: 25px;
+            justify-content: center;
+        }
+        &__left {
+            display: grid;
+            grid-row: 2;
+        }
+    }
+}
+
+@media(min-width:375px) and (max-width:424px) {
+    .center {
+        @include MobileVerticalContenCenter();
+    }
+    header {
+        .navigation {
+            &__right {
+                .navigation__user-link {
+                    display: none;
+                }
+                .navigation__cart-link {
+                    display: none;
+                }
+            }
+        }
+    }
+    .header-top {
+        &__content {
+            justify-content: center;
+            padding-top: 50px;
+            padding-bottom: 69px;
+        }
+    }
+    .main {
+        .main__content {
+            flex-flow: column;
+            display: flex;
+            justify-content: center;
+            margin-top: 40px;
+            margin-bottom: 100px;
+            gap: 40px;
+            align-items: center;
+        }
+        .main__content-right {
+            max-width: 358px;
+            display: flex;
+            flex-direction: column;
+            gap: 22px;
+            h1 {
+                color: #000;
+                font-size: 16px;
+                font-weight: 300;
+                line-height: 29px;
+                margin-bottom: 10px;
+            }
+            p {
+                color: #000;
+                font-size: 16px;
+                font-weight: 300;
+                line-height: 20px;
+            }
+            ul {
+                display: flex;
+                flex-direction: column;
+                gap: 16px;
+                color: #000;
+                font-size: 16px;
+                font-weight: 300;
+                line-height: 20px;
+            }
+            li {
+                display: flex;
+                list-style-type: none;
+                font-size: 16px;
+                &::before {
+                    content: url(img/mark.svg);
+                }
+            }
+        }
+        .main__form {
+            &-radio {
+                .radio-other {
+                    display: flex;
+                    gap: 10px;
+                }
+            }
+        }
+        .footer-center__content {
+            display: grid;
+            padding: 40px 0 96px;
+            justify-items: center;
+            gap: 48px;
+        }
+    }
+    .footer-top {
+        background: linear-gradient(rgba(244, 244, 244, 0.7), rgba(244, 244, 244, 0.5)), url(img/footer-background.png) 27%;
+        background-size: cover;
+        &__content {
+            gap: 59px;
+            padding: 64px 0 109px;
+            justify-items: center;
+        }
+        &__visiter-comment {
+            height: auto;
+        }
+        &__subscribe-title {
+            margin-bottom: 22px;
+        }
+        &__subscribe-title-2nd {
+            font-size: 14px;
+        }
+        &__email-subscribe-field {
+            font-size: 14px
+        }
+        &__subscribe-block-left {
+            width: 250px;
+            height: 46px;
+        }
+        &__content-right {
+            width: auto;
+        }
+    }
+    .footer-bottom {
+        &__content {
+            grid-template-columns: 250px;
+            padding: 43px 62px 24px;
+            justify-items: center;
+            gap: 25px;
+            justify-content: center;
+        }
+        &__left {
+            display: grid;
+            grid-row: 2;
+        }
+    }
+}
